@@ -28,7 +28,7 @@ const Login = () => {
                 console.log("token:", token) 
                 navigate("/todo-list") 
              }else{
-                navigate('/todo')
+                navigate('/todo-redux')
             }
             } catch (err) { 
                 console.log(err) 
