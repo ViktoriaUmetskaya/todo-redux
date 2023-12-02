@@ -1,43 +1,26 @@
-import {ADD_NAME, ADD_EMAIL, ADD_PASSWORD, ADD_GENDER, ADD_AGE } from '../Actions/RegistrationAction';
+import { ADD_USER } from '../Actions/RegistrationAction'
 
-const initialState={
-    username:'',
-    email: "",
-    password: "",
-    gender:"",
-    age:""
-}
-
-const RegistrationReducer = (state=initialState, action)=>{
-    switch (action.type){
-        case ADD_NAME:
-            return{
-                ...state,
-                username:action.payload
-            }
-        case ADD_EMAIL:
-            return{
-                ...state,
-                email:action.payload
-            }
-        case ADD_PASSWORD:
-            return{
-                ...state,
-                 password:action.payload
-            }
-        case ADD_GENDER:
-            return{
-                ...state,
-                gender:action.payload
-            }    
-        case ADD_AGE:
-            return{
-                ...state,
-                age:action.payload
-            } 
-            default:
-                return state
+const initialState = {
+    user:{
+        username:'',
+        email:'',
+        password:'',
+        gender:'',
+        age:''
     }
 }
 
-export default RegistrationReducer
+const RegistrationReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case ADD_USER:
+            console.log('Adding user to state:', action.payload);
+            return {
+                ...state,
+                user:action.payload
+            };
+            default:
+                return state;
+    }
+}
+
+export default RegistrationReducer;

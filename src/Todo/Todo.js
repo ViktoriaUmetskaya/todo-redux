@@ -56,7 +56,7 @@ function Todo(){
                 <Form className='forma' putTodo={putTodo} />
                 <ul className='todos'>
                     {
-                        todos.map(todo=>{
+                        todos && todos.map(todo=>{
                             return (
                                 <li className={todo.done ? 'todo done' : 'todo'} key={todo.id} onClick={() => toggleTodo(todo.id)}>
                                 {todo.id === editingTodo ? (

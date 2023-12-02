@@ -28,7 +28,9 @@ const TodoReducer = (state=initialState, action) => {
          case REMOVE_TODO:
             return {
                 ...state,
-                todos: []
+                todos: [],
+                allTodos:0,
+                allComplete:0
         }
         case EDIT_TODO:
             return {

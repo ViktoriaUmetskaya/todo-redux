@@ -15,7 +15,7 @@ const initialState = {
       case ADD_PASSWORD:
         return {
           ...state,
-          password: action.password
+          password: action.payload
         };
       default:
         return state;
